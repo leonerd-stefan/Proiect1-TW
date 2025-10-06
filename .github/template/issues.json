@@ -1,0 +1,26 @@
+[
+  {
+    "body": "## Description\r\n\r\nThe first step when creating a website is to set up your development environment that would enable you to work.\r\n\r\n## Acceptance criteria\r\n\r\nCheck the items in the list below, as you are doing them:\r\n\r\n- [ ] Setup [VSCode](https://code.visualstudio.com/)\r\n- [ ] Install recommended extensions: [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)\r\n- [ ] Create a folder where you will work on this assignment \r\n- [ ] Open VSCode in that folder (File -> Open Folder)\r\n- [ ] Create a basic HTML page, called `index.html`. Use [MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) as reference.\r\n- [ ] Use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to view live changes in the HTML page in your web browser.",
+    "title": "Setup development environment"
+  },
+  {
+    "body": "## Description\r\n\r\nAny website needs to have a topic, and planning for the pages that are going to be included in it.\r\n\r\n## Acceptance criteria\r\n\r\n- [ ] Decide on a topic for your website\r\n- [ ] Plan the pages that are to be included. See [MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like). Gather resources and assets.\r\n- [ ] Create the pages as empty `html` files.\r\n",
+    "title": "Plan website structure"
+  },
+  {
+    "body": "## Description\r\n\r\nCreate the initial landing page for your website, `index.html`. This will have navigation to the other pages, some general information about your topic and a table.\r\n\r\n## Acceptance criteria\r\n\r\n- [ ] The html document should follow a semantic structure. See [web.dev](https://web.dev/learn/html/semantic-html/).\r\n- [ ] A navigation list (`<nav>`) shows links to all the pages to be included in the website\r\n- [ ] The page starts with a level 1 header \"Overview\"\r\n- [ ] A paragraph contains a general description of your topic\r\n- [ ] A second level 2 header exists\r\n- [ ] A table (`<table>`) exists to show a some general information. \r\n- [ ] The table should have at a minimum four columns and four rows.\r\n- [ ] Some cells/rows need to be merged (use `colspan/rowspan`).\r\n- [ ] The browsers tab displays the name of the topic you chose.",
+    "title": "Create the general overview page"
+  },
+  {
+    "body": "## Description\r\n\r\nThe topic of your interest must have some history. Include it here.\r\n\r\nThis page will have some paragraphs, some nested lists and and images inserted throughout. \r\n\r\n## Acceptance criteria\r\n\r\n- [ ] Navigation allows the user to navigate between all pages.\r\n- [ ] A structure with at least two levels of header nesting should exist\r\n- [ ] All years are shown using using the [`<strong>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong) importance element.\r\n- [ ] All names are shown as emphasized, using [`<em>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em). \r\n- [ ] Ordered or unordered lists should be used, with at least one level of nesting.\r\n- [ ] The browsers tab follows the format `History - Topic Name`.\r\n\r\n",
+    "title": "Create history page"
+  },
+  {
+    "body": "## Description\r\n\r\nFor example, if the topic you chose is a sport, list out its rules. If it's a hobby, list out its general guidelines.\r\n\r\n## Acceptance criteria\r\n\r\n- [ ] Navigation allows the user to navigate between all pages.\r\n- [ ] A structure with at least two levels of header nesting should exist\r\n- [ ] Use the [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) element to show some additional information\r\n- [ ] Embed a video. It can either be a local video file, or a video from a video hosting website.\r\n- [ ] The browsers tab follows the format `Rules - Topic Name`.\r\n\r\n",
+    "title": "Create a page about how the topic works"
+  },
+  {
+    "body": "## Description\r\n\r\nThere are some notable people through the history that left their mark on your topic\r\n\r\n## Acceptance criteria\r\n\r\n- [ ] Navigation allows the user to navigate between all pages.\r\n- [ ] Create a table that lists notable people. At least 5 rows should be added.\r\n- [ ] The following columns should exist: _Name_, _Photo_, _Age_, _Details_.\r\n- [ ] The _Name_ column should contain a link to an external page with more information.\r\n- [ ] The _Photo_ column should contain an embedded image. All images should be the same height.\r\n- [ ] The _Details_ column should contain paragraphs, lists, or even nested tables\r\n- [ ] The browsers tab follows the format `Notable People - Topic Name`.\r\n\r\n",
+    "title": "Create a page for notable people"
+  }
+]
