@@ -1,40 +1,16 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-REPOROOT=$(git rev-parse --show-toplevel)
-TEMPLATEDIR=$REPOROOT/.github/template
-TEMPLATECONFIG=$TEMPLATEDIR/gitconfig
-TEMPLATELABEL=$(git config -f $TEMPLATECONFIG template.issue-label)
-TEMPLATEREPO=$(git config -f $TEMPLATECONFIG template.repo)
-TEMPLATEISSUES=$TEMPLATEDIR/issues.json 
-TMPFILE=$TEMPLATEDIR/body.tmp
-CLEANUP=
+issues_file="$(dirname "$0")/issues.json"
+existing_issues="$(gh issue list --state all --limit 1000 --json title)"
 
-cd $REPOROOT
+jq -c '.[]' "$issues_file" | while IFS= read -r issue; do
+  title="$(jq -r '.title' <<< "$issue")"
 
- if [ -e $TEMPLATEISSUES ] 
- then
-    echo "Using cached issues"
- else
-   gh issue list --label $TEMPLATELABEL -R $TEMPLATEREPO --json 'title,body' > $TEMPLATEISSUES
-   CLEANUP="rm $TEMPLATEISSUES"
- fi
+  if jq -e --arg title "$title" 'any(.[]; .title == $title)' <<< "$existing_issues" > /dev/null; then
+    echo "Issue already exists: $title"
+    continue
+  fi
 
-for row in $(cat $TEMPLATEISSUES | jq -r '.[] | @base64'); do
-    _jq() { 
-     echo ${row} | base64 --decode | jq -r ${1}
-    }
-   TITLE=$(_jq '.title' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-   
-   if gh issue list | grep -e ".*$TITLE.*" >/dev/null ; then
-     echo "Issue already exitst: ($TITLE)"
-   else
-     echo Copying issue: \'$TITLE\'
-     echo $(_jq '.body') > $TMPFILE
-     cmd="gh issue create --title \"$(_jq '.title')\" --body-file $TMPFILE"
-     eval $cmd
-     rm $TMPFILE
-   fi
-
+  jq -j '.body' <<< "$issue" | gh issue create --title "$title" --body-file -
 done
-
-eval $CLEANUP
