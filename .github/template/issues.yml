@@ -8,56 +8,61 @@
 
     Check the items in the list below, as you are doing them:
 
-    - [ ] Setup [VSCode](https://code.visualstudio.com/)
-    - [ ] Install recommended extensions: [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-    - [ ] Create a folder where you will work on this assignment
-    - [ ] Open VSCode in that folder (File -> Open Folder)
-    - [ ] Create a basic HTML page, called `index.html`. Use [MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) as reference.
-    - [ ] Use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to view live changes in the HTML page in your web browser.
+    - [ ] Set up your code editor. Choose one of the following, or use one you already prefer:
+      - [VS Code](https://code.visualstudio.com/).
+      - [Zed](https://zed.dev/).
+      - [Helix](https://helix-editor.com/).
+    - [ ] Set up useful tools or extensions for your editor:
+      - A code formatter like [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) or [Oxide](https://oxc.rs/docs/guide/usage/formatter/editors.html).
+      - A way to run a local development server, like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+      - A spell checker, like [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
+    - [ ] Open the assignment folder in your chosen editor.
+    - [ ] Make a small change to the existing `index.html`. Use [MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started) as reference.
+    - [ ] Use a local development server to view the change in your web browser.
 - title: "Plan website structure"
   body: |-
     ## Description
 
-    Any website needs to have a topic, and planning for the pages that are going to be included in it.
+    Choose a topic and plan the pages your website will include.
 
     ## Acceptance criteria
 
     - [ ] Decide on a topic for your website
     - [ ] Plan the pages that are to be included. See [MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like). Gather resources and assets.
-    - [ ] Create the pages as empty `html` files.
+    - [ ] Create the remaining pages as empty `.html` files.
 - title: "Create the general overview page"
   body: |-
     ## Description
 
-    Create the initial landing page for your website, `index.html`. This will have navigation to the other pages, some general information about your topic and a table.
+    Build the landing page in `index.html`. It will have navigation to the other pages, some general information about your topic, and a table.
 
     ## Acceptance criteria
 
-    - [ ] The html document should follow a semantic structure. See [web.dev](https://web.dev/learn/html/semantic-html/).
-    - [ ] A navigation list (`<nav>`) shows links to all the pages to be included in the website
-    - [ ] The page starts with a level 1 header "Overview"
+    - [ ] The HTML document should follow a semantic structure. See [web.dev](https://web.dev/learn/html/semantic-html/).
+    - [ ] A `<nav>` element shows links to all the pages in the website.
+    - [ ] The main content starts with a level 1 heading "Overview".
     - [ ] A paragraph contains a general description of your topic
     - [ ] A second level 2 header exists
-    - [ ] A table (`<table>`) exists to show a some general information.
-    - [ ] The table should have at a minimum four columns and four rows.
+    - [ ] A table (`<table>`) shows general information about your topic.
+    - [ ] The table has at least four columns and four rows.
     - [ ] Some cells/rows need to be merged (use `colspan/rowspan`).
-    - [ ] The browsers tab displays the name of the topic you chose.
+    - [ ] The browser tab displays the name of your topic.
 - title: "Create history page"
   body: |-
     ## Description
 
     The topic of your interest must have some history. Include it here.
 
-    This page will have some paragraphs, some nested lists and and images inserted throughout.
+    This page will have paragraphs, a nested list, and images throughout.
 
     ## Acceptance criteria
 
     - [ ] Navigation allows the user to navigate between all pages.
     - [ ] A structure with at least two levels of header nesting should exist
-    - [ ] All years are shown using using the [`<strong>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong) importance element.
-    - [ ] All names are shown as emphasized, using [`<em>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em).
+    - [ ] Use [`<strong>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong) for important dates or facts.
+    - [ ] Use [`<em>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em) where a name or phrase needs emphasis.
     - [ ] Ordered or unordered lists should be used, with at least one level of nesting.
-    - [ ] The browsers tab follows the format `History - Topic Name`.
+    - [ ] The browser tab follows the format `History - Topic Name`.
 - title: "Create a page about how the topic works"
   body: |-
     ## Description
@@ -68,21 +73,21 @@
 
     - [ ] Navigation allows the user to navigate between all pages.
     - [ ] A structure with at least two levels of header nesting should exist
-    - [ ] Use the [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) element to show some additional information
+    - [ ] Use the [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) element with a `<summary>` to show additional information.
     - [ ] Embed a video. It can either be a local video file, or a video from a video hosting website.
-    - [ ] The browsers tab follows the format `Rules - Topic Name`.
+    - [ ] The browser tab follows the format `How It Works - Topic Name`.
 - title: "Create a page for notable people"
   body: |-
     ## Description
 
-    There are some notable people through the history that left their mark on your topic
+    Introduce notable people who have contributed to your topic.
 
     ## Acceptance criteria
 
     - [ ] Navigation allows the user to navigate between all pages.
-    - [ ] Create a table that lists notable people. At least 5 rows should be added.
+    - [ ] Create a table that lists at least five people.
     - [ ] The following columns should exist: _Name_, _Photo_, _Age_, _Details_.
     - [ ] The _Name_ column should contain a link to an external page with more information.
-    - [ ] The _Photo_ column should contain an embedded image. All images should be the same height.
-    - [ ] The _Details_ column should contain paragraphs, lists, or even nested tables
-    - [ ] The browsers tab follows the format `Notable People - Topic Name`.
+    - [ ] The _Photo_ column contains an image for each person. All images should be the same height.
+    - [ ] The _Details_ column contains paragraphs or lists with relevant information.
+    - [ ] The browser tab follows the format `Notable People - Topic Name`.
